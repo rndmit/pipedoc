@@ -3,7 +3,7 @@
 
 == .build/acme
 
-`include path: example/lib/build/acme.yaml`
+`include path: example/pipelinelib/build/acme.yaml`
 
 Acme pipeline module
 
