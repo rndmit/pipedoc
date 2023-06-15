@@ -1,0 +1,19 @@
+# Acme pipeline module
+#
+# === Example job:
+# [source, yaml]
+# ----
+# acme:
+#   extends: .build/acme
+#   variable:
+#     NAME: Lupa
+# ----
+
+---
+variables:
+  #!opt: User's name
+  NAME: Pupa
+
+.build/acme:
+  script:
+    - echo "Hi there, ${NAME}!"

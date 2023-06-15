@@ -1,6 +1,6 @@
 from pathlib import Path
 
-LIB_DIR = "example/lib"
+LIB_DIR = "example/pipelinelib"
 LIB_GROUPS = ["build"]
 DOCS_DIR = "example/docs"
 MODULES_DIR = "modules"
