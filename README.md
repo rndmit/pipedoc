@@ -1,6 +1,6 @@
 # Pipedoc
 
-Generate docs from pipeline libraries. Compatible with Gitlab CI but other yaml-based CIs should also work
+Generate docs from pipeline libraries. Tested with Gitlab CI but other yaml-based CIs should also work
 
 ## How to
 
