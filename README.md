@@ -14,6 +14,6 @@ Generate docs from pipeline libraries. Tested with Gitlab CI but other yaml-base
 
 5. ```mkdir -p docs/{raw,modules}```
 
-6. ```python3 .```
+6. ```python3 pipedoc```
 
 7. Enjoy!
