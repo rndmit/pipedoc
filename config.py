@@ -1,12 +1,12 @@
 from pathlib import Path
 
-LIB_DIR = "lib"
-LIB_GROUPS = ["build", "deploy"]
-DOCS_DIR = "docs"
+LIB_DIR = "example/lib"
+LIB_GROUPS = ["build"]
+DOCS_DIR = "example/docs"
 MODULES_DIR = "modules"
 RAW_DOC_DIR = "raw"
 
-ABS_REPO_ROOT = Path(__file__).parent.parent
+ABS_REPO_ROOT = Path(__file__).parent
 ABS_LIB_DIR = Path(ABS_REPO_ROOT, LIB_DIR)
 ABS_DOCS_DIR = Path(ABS_REPO_ROOT, DOCS_DIR)
 ABS_RAW_DOC_DIR = Path(ABS_DOCS_DIR, RAW_DOC_DIR)

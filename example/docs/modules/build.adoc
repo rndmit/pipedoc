@@ -1,0 +1,24 @@
+:toc:
+:toclevels: 2
+
+== .build/acme
+
+`include path: example/lib/build/acme.yaml`
+
+Acme pipeline module
+
+=== Example job:
+[source, yaml]
+----
+acme:
+  extends: .build/acme
+  variable:
+    NAME: Lupa
+----
+
+=== Options
+|===
+|Variable |Type |Default |Description
+|NAME |string |Pupa |User's name
+|===
+
