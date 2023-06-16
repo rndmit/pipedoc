@@ -17,7 +17,7 @@ class Generate(Command):
     
 
     def exec(self, vals: Values) -> int:
-        ABS_REPO_ROOT = Path(__file__).parent.parent
+        ABS_REPO_ROOT = Path.cwd()
         ABS_LIB_DIR = Path(ABS_REPO_ROOT, vals.get(self._opt_lib_dir))
         ABS_DOCS_DIR = Path(ABS_REPO_ROOT, vals.get(self._opt_doc_dir))
         ABS_RAW_DOC_DIR = Path(ABS_DOCS_DIR, vals.get(self._opt_raw_dir))
