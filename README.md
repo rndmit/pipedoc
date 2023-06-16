@@ -4,6 +4,8 @@ Generate docs from pipeline libraries. Tested with Gitlab CI but other yaml-base
 
 ## How to
 
+0. Install pipedoc ```pip install git+https://github.com/rndmit/pipedoc.git@master```
+
 1. Separate your templates into "modules" where one file contains only one template and it's variables (e.g. golang.yaml)
 
 2. Group modules into separate directories (e.g. build) and move them to library dir (e.g. lib)
@@ -14,6 +16,6 @@ Generate docs from pipeline libraries. Tested with Gitlab CI but other yaml-base
 
 5. ```mkdir -p docs/{raw,modules}```
 
-6. ```python3 pipedoc generate -l lib -d docs -g build ```
+6. ```python -m pipedoc generate -l lib -d docs -g build```
 
 7. Enjoy!
