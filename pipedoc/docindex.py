@@ -2,7 +2,7 @@ from os.path import relpath, basename, splitext
 from string import Template
 from pathlib import Path
 from glob import glob
-from log import log
+from pipedoc.log import log
 
 
 INDEX_TPL = Template("""\

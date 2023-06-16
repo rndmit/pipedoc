@@ -1,8 +1,8 @@
 from pathlib import Path
 from pycli import Application, Command, Option, Values
-from log import log
-from module import process_module_group
-from docindex import render_index
+from pipedoc.log import log
+from pipedoc.module import process_module_group
+from pipedoc.docindex import render_index
 
 
 class Generate(Command):
