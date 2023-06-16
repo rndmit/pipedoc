@@ -3,7 +3,7 @@ import os
 import re
 from glob import glob
 from pathlib import Path
-from log import log
+from pipedoc.log import log
 
 
 class ModuleBodyNotFoundErr(Exception):

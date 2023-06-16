@@ -4,6 +4,10 @@ version = "0.1.0"
 description = ""
 authors = ["rndmit <rndmit@icloud.com>"]
 readme = "README.md"
+packages = [{include = "pipedoc"}]
+
+[tool.poetry.scripts]
+pipedoc = "pipedoc.app:main"
 
 [tool.poetry.dependencies]
 python = "^3.11"
