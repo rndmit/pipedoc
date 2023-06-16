@@ -6,7 +6,7 @@ Generate docs from pipeline libraries. Tested with Gitlab CI but other yaml-base
 
 1. Separate your templates into "modules" where one file contains only one template and it's variables (e.g. golang.yaml)
 
-2. Group modules into separate directories (e.g. build)
+2. Group modules into separate directories (e.g. build) and move them to library dir (e.g. lib)
 
 3. Write your doc in comment at the beginning of the module's file and insert yaml document separator (---) after it. It's your module docstring which will be inlined into documentation.
 
@@ -14,6 +14,6 @@ Generate docs from pipeline libraries. Tested with Gitlab CI but other yaml-base
 
 5. ```mkdir -p docs/{raw,modules}```
 
-6. ```python3 pipedoc```
+6. ```python3 pipedoc generate -l lib -d docs -g build ```
 
 7. Enjoy!
