@@ -2,7 +2,6 @@ from os.path import relpath, basename, splitext
 from string import Template
 from pathlib import Path
 from glob import glob
-from config import MODULES_DIR
 from log import log
 
 

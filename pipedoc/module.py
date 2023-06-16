@@ -4,7 +4,6 @@ import re
 from glob import glob
 from pathlib import Path
 from log import log
-from config import ABS_REPO_ROOT, ABS_LIB_DIR
 
 
 class ModuleBodyNotFoundErr(Exception):
@@ -130,18 +129,19 @@ def find_sources(pattern: Path) -> list[str]:
     return sources
 
 
-def parse(sources: list[str]) -> list[PipelineModule]:
+def parse(sources: list[str], repo_root: Path) -> list[PipelineModule]:
     modules: list[PipelineModule] = []
     for srcpath in sources:
-        modules.append(PipelineModule.from_source(ABS_REPO_ROOT, srcpath))
+        modules.append(PipelineModule.from_source(repo_root, srcpath))
     return modules
 
 
-def process_module_group(name: str, outdir: Path):
+def process_module_group(name: str, outdir: Path, lib_dir: Path, repo_root: Path):
     log.info(f"processing group {name}")
     modules = parse(
-        find_sources(
-            Path(ABS_LIB_DIR, name, "**.yaml")))
+        find_sources(Path(lib_dir, name, "**.yaml")),
+        repo_root
+    )
     outpath = Path(outdir, name).with_suffix(".adoc")
     with open(outpath, "w+t") as output:
         log.info(f"writing doc to {outpath}")
